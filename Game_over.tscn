@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Game_over.gd" type="Script" id=2]
+[ext_resource path="res://Stars_Effect.tscn" type="PackedScene" id=3]
+
+[node name="Game_over" type="Node"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 80.0
+margin_top = 32.0
+margin_right = 160.0
+margin_bottom = 46.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 1 )
+text = "GAME OVER"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stars_Effect" parent="." instance=ExtResource( 3 )]
+
+[node name="highscore_label" type="Label" parent="."]
+margin_left = 112.0
+margin_top = 64.0
+margin_right = 208.0
+margin_bottom = 78.0
+custom_fonts/font = ExtResource( 1 )
+text = "HIGHSCORE: "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 112.0
+margin_top = 160.0
+margin_right = 207.0
+margin_bottom = 174.0
+custom_fonts/font = ExtResource( 1 )
+text = "PRESS SPACE TO CONTINUE"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
